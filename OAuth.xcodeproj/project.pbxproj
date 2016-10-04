@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,12 +12,45 @@
 		6697E0121D9F5CA100FB14AD /* CommonHMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6697E0111D9F5CA100FB14AD /* CommonHMAC.swift */; };
 		6697E01F1DA27EB400FB14AD /* CommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6697E01E1DA27EB400FB14AD /* CommonCrypto.framework */; };
 		6697E0221DA2959A00FB14AD /* OAuthCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6697E0211DA2959A00FB14AD /* OAuthCredential.swift */; };
+		669AA3961DA3D652002404BF /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D1426D1D9AD4D4002DF794 /* Tests.swift */; };
+		669AA3981DA3D652002404BF /* OAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D1425F1D9AD4D4002DF794 /* OAuth.framework */; };
+		669AA3A21DA3D6C4002404BF /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D1426D1D9AD4D4002DF794 /* Tests.swift */; };
+		669AA3A41DA3D6C4002404BF /* OAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D1425F1D9AD4D4002DF794 /* OAuth.framework */; };
+		669AA3AE1DA3D6C8002404BF /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D1426D1D9AD4D4002DF794 /* Tests.swift */; };
+		669AA3B01DA3D6C8002404BF /* OAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D1425F1D9AD4D4002DF794 /* OAuth.framework */; };
+		66B9DC171DA3D3D8001F6E86 /* CommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66B9DC161DA3D3D8001F6E86 /* CommonCrypto.framework */; };
+		66B9DC191DA3D3E9001F6E86 /* CommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66B9DC181DA3D3E9001F6E86 /* CommonCrypto.framework */; };
+		66B9DC1B1DA3D3F8001F6E86 /* CommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66B9DC1A1DA3D3F8001F6E86 /* CommonCrypto.framework */; };
+		66B9DC1F1DA3D4B1001F6E86 /* OAuth.h in Headers */ = {isa = PBXBuildFile; fileRef = 66D142621D9AD4D4002DF794 /* OAuth.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		66B9DC201DA3D4B2001F6E86 /* OAuth.h in Headers */ = {isa = PBXBuildFile; fileRef = 66D142621D9AD4D4002DF794 /* OAuth.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		66B9DC211DA3D4B3001F6E86 /* OAuth.h in Headers */ = {isa = PBXBuildFile; fileRef = 66D142621D9AD4D4002DF794 /* OAuth.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		66D142691D9AD4D4002DF794 /* OAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D1425F1D9AD4D4002DF794 /* OAuth.framework */; };
-		66D1426E1D9AD4D4002DF794 /* OAuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D1426D1D9AD4D4002DF794 /* OAuthTests.swift */; };
+		66D1426E1D9AD4D4002DF794 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D1426D1D9AD4D4002DF794 /* Tests.swift */; };
 		66D142701D9AD4D4002DF794 /* OAuth.h in Headers */ = {isa = PBXBuildFile; fileRef = 66D142621D9AD4D4002DF794 /* OAuth.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		669AA3941DA3D652002404BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66D142541D9AD400002DF794 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66D1425E1D9AD4D3002DF794;
+			remoteInfo = OAuth;
+		};
+		669AA3A01DA3D6C4002404BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66D142541D9AD400002DF794 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66D1425E1D9AD4D3002DF794;
+			remoteInfo = OAuth;
+		};
+		669AA3AC1DA3D6C8002404BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66D142541D9AD400002DF794 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66D1425E1D9AD4D3002DF794;
+			remoteInfo = OAuth;
+		};
 		66D1426A1D9AD4D4002DF794 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 66D142541D9AD400002DF794 /* Project object */;
@@ -33,15 +66,72 @@
 		6697E0111D9F5CA100FB14AD /* CommonHMAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonHMAC.swift; sourceTree = "<group>"; };
 		6697E01E1DA27EB400FB14AD /* CommonCrypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CommonCrypto.framework; path = Carthage/Build/Mac/CommonCrypto.framework; sourceTree = "<group>"; };
 		6697E0211DA2959A00FB14AD /* OAuthCredential.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthCredential.swift; sourceTree = "<group>"; };
+		669AA39D1DA3D652002404BF /* Tests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		669AA3A91DA3D6C4002404BF /* Tests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		669AA3B51DA3D6C8002404BF /* Tests-watchOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests-watchOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		66B9DBE31DA3CA18001F6E86 /* OAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		66B9DBF21DA3CFC6001F6E86 /* OAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		66B9DBFF1DA3D031001F6E86 /* OAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		66B9DC131DA3D21E001F6E86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66B9DC161DA3D3D8001F6E86 /* CommonCrypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CommonCrypto.framework; path = Carthage/Build/iOS/CommonCrypto.framework; sourceTree = "<group>"; };
+		66B9DC181DA3D3E9001F6E86 /* CommonCrypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CommonCrypto.framework; path = Carthage/Build/tvOS/CommonCrypto.framework; sourceTree = "<group>"; };
+		66B9DC1A1DA3D3F8001F6E86 /* CommonCrypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CommonCrypto.framework; path = Carthage/Build/watchOS/CommonCrypto.framework; sourceTree = "<group>"; };
 		66D1425F1D9AD4D4002DF794 /* OAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D142621D9AD4D4002DF794 /* OAuth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OAuth.h; sourceTree = "<group>"; };
-		66D142631D9AD4D4002DF794 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		66D142681D9AD4D4002DF794 /* OAuthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OAuthTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		66D1426D1D9AD4D4002DF794 /* OAuthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthTests.swift; sourceTree = "<group>"; };
+		66D142681D9AD4D4002DF794 /* Tests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		66D1426D1D9AD4D4002DF794 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		66D1426F1D9AD4D4002DF794 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		669AA3971DA3D652002404BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				669AA3981DA3D652002404BF /* OAuth.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		669AA3A31DA3D6C4002404BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				669AA3A41DA3D6C4002404BF /* OAuth.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		669AA3AF1DA3D6C8002404BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				669AA3B01DA3D6C8002404BF /* OAuth.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66B9DBDF1DA3CA18001F6E86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66B9DC171DA3D3D8001F6E86 /* CommonCrypto.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66B9DBEE1DA3CFC6001F6E86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66B9DC1B1DA3D3F8001F6E86 /* CommonCrypto.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66B9DBFB1DA3D031001F6E86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66B9DC191DA3D3E9001F6E86 /* CommonCrypto.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		66D1425B1D9AD4D3002DF794 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -64,6 +154,9 @@
 		6697E0051D9F57C200FB14AD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				66B9DC1A1DA3D3F8001F6E86 /* CommonCrypto.framework */,
+				66B9DC181DA3D3E9001F6E86 /* CommonCrypto.framework */,
+				66B9DC161DA3D3D8001F6E86 /* CommonCrypto.framework */,
 				6697E01E1DA27EB400FB14AD /* CommonCrypto.framework */,
 			);
 			name = Frameworks;
@@ -73,7 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				66D142611D9AD4D4002DF794 /* OAuth */,
-				66D1426C1D9AD4D4002DF794 /* OAuthTests */,
+				66D1426C1D9AD4D4002DF794 /* Tests */,
 				66D142601D9AD4D4002DF794 /* Products */,
 				6697E0051D9F57C200FB14AD /* Frameworks */,
 			);
@@ -83,7 +176,13 @@
 			isa = PBXGroup;
 			children = (
 				66D1425F1D9AD4D4002DF794 /* OAuth.framework */,
-				66D142681D9AD4D4002DF794 /* OAuthTests.xctest */,
+				66D142681D9AD4D4002DF794 /* Tests-macOS.xctest */,
+				66B9DBE31DA3CA18001F6E86 /* OAuth.framework */,
+				66B9DBF21DA3CFC6001F6E86 /* OAuth.framework */,
+				66B9DBFF1DA3D031001F6E86 /* OAuth.framework */,
+				669AA39D1DA3D652002404BF /* Tests-iOS.xctest */,
+				669AA3A91DA3D6C4002404BF /* Tests-tvOS.xctest */,
+				669AA3B51DA3D6C8002404BF /* Tests-watchOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -92,27 +191,51 @@
 			isa = PBXGroup;
 			children = (
 				66D142621D9AD4D4002DF794 /* OAuth.h */,
-				66D142631D9AD4D4002DF794 /* Info.plist */,
 				6697DFFD1D9E705400FB14AD /* OAuth10.swift */,
 				6697E0211DA2959A00FB14AD /* OAuthCredential.swift */,
 				6697E0011D9E8CB500FB14AD /* OAuthSignatureMethod.swift */,
 				6697E0111D9F5CA100FB14AD /* CommonHMAC.swift */,
+				66B9DC131DA3D21E001F6E86 /* Info.plist */,
 			);
 			path = OAuth;
 			sourceTree = "<group>";
 		};
-		66D1426C1D9AD4D4002DF794 /* OAuthTests */ = {
+		66D1426C1D9AD4D4002DF794 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				66D1426D1D9AD4D4002DF794 /* OAuthTests.swift */,
+				66D1426D1D9AD4D4002DF794 /* Tests.swift */,
 				66D1426F1D9AD4D4002DF794 /* Info.plist */,
 			);
-			path = OAuthTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		66B9DBE01DA3CA18001F6E86 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66B9DC1F1DA3D4B1001F6E86 /* OAuth.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66B9DBEF1DA3CFC6001F6E86 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66B9DC211DA3D4B3001F6E86 /* OAuth.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66B9DBFC1DA3D031001F6E86 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66B9DC201DA3D4B2001F6E86 /* OAuth.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		66D1425C1D9AD4D3002DF794 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,28 +247,139 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		66D1425E1D9AD4D3002DF794 /* OAuth */ = {
+		669AA3921DA3D652002404BF /* Tests-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 66D142711D9AD4D4002DF794 /* Build configuration list for PBXNativeTarget "OAuth" */;
+			buildConfigurationList = 669AA39A1DA3D652002404BF /* Build configuration list for PBXNativeTarget "Tests-iOS" */;
 			buildPhases = (
-				66D1425A1D9AD4D3002DF794 /* Sources */,
-				66D1425B1D9AD4D3002DF794 /* Frameworks */,
-				66D1425C1D9AD4D3002DF794 /* Headers */,
-				66D1425D1D9AD4D3002DF794 /* Resources */,
-				6697E0201DA27EF000FB14AD /* ShellScript */,
+				669AA3951DA3D652002404BF /* Sources */,
+				669AA3971DA3D652002404BF /* Frameworks */,
+				669AA3991DA3D652002404BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				669AA3931DA3D652002404BF /* PBXTargetDependency */,
+			);
+			name = "Tests-iOS";
+			productName = OAuthTests;
+			productReference = 669AA39D1DA3D652002404BF /* Tests-iOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		669AA39E1DA3D6C4002404BF /* Tests-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 669AA3A61DA3D6C4002404BF /* Build configuration list for PBXNativeTarget "Tests-tvOS" */;
+			buildPhases = (
+				669AA3A11DA3D6C4002404BF /* Sources */,
+				669AA3A31DA3D6C4002404BF /* Frameworks */,
+				669AA3A51DA3D6C4002404BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				669AA39F1DA3D6C4002404BF /* PBXTargetDependency */,
+			);
+			name = "Tests-tvOS";
+			productName = OAuthTests;
+			productReference = 669AA3A91DA3D6C4002404BF /* Tests-tvOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		669AA3AA1DA3D6C8002404BF /* Tests-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 669AA3B21DA3D6C8002404BF /* Build configuration list for PBXNativeTarget "Tests-watchOS" */;
+			buildPhases = (
+				669AA3AD1DA3D6C8002404BF /* Sources */,
+				669AA3AF1DA3D6C8002404BF /* Frameworks */,
+				669AA3B11DA3D6C8002404BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				669AA3AB1DA3D6C8002404BF /* PBXTargetDependency */,
+			);
+			name = "Tests-watchOS";
+			productName = OAuthTests;
+			productReference = 669AA3B51DA3D6C8002404BF /* Tests-watchOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		66B9DBE21DA3CA18001F6E86 /* OAuth-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66B9DBE81DA3CA18001F6E86 /* Build configuration list for PBXNativeTarget "OAuth-iOS" */;
+			buildPhases = (
+				66B9DBDE1DA3CA18001F6E86 /* Sources */,
+				66B9DBDF1DA3CA18001F6E86 /* Frameworks */,
+				66B9DBE01DA3CA18001F6E86 /* Headers */,
+				66B9DBE11DA3CA18001F6E86 /* Resources */,
+				669AA3B61DA3DA46002404BF /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = OAuth;
+			name = "OAuth-iOS";
+			productName = "OAuth-iOS";
+			productReference = 66B9DBE31DA3CA18001F6E86 /* OAuth.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		66B9DBF11DA3CFC6001F6E86 /* OAuth-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66B9DBF71DA3CFC7001F6E86 /* Build configuration list for PBXNativeTarget "OAuth-watchOS" */;
+			buildPhases = (
+				66B9DBED1DA3CFC6001F6E86 /* Sources */,
+				66B9DBEE1DA3CFC6001F6E86 /* Frameworks */,
+				66B9DBEF1DA3CFC6001F6E86 /* Headers */,
+				66B9DBF01DA3CFC6001F6E86 /* Resources */,
+				669AA3B91DA3DACC002404BF /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "OAuth-watchOS";
+			productName = "OAuth-watchOS";
+			productReference = 66B9DBF21DA3CFC6001F6E86 /* OAuth.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		66B9DBFE1DA3D031001F6E86 /* OAuth-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66B9DC041DA3D032001F6E86 /* Build configuration list for PBXNativeTarget "OAuth-tvOS" */;
+			buildPhases = (
+				66B9DBFA1DA3D031001F6E86 /* Sources */,
+				66B9DBFB1DA3D031001F6E86 /* Frameworks */,
+				66B9DBFC1DA3D031001F6E86 /* Headers */,
+				66B9DBFD1DA3D031001F6E86 /* Resources */,
+				669AA3B81DA3DAC4002404BF /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "OAuth-tvOS";
+			productName = "OAuth-tvOS";
+			productReference = 66B9DBFF1DA3D031001F6E86 /* OAuth.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		66D1425E1D9AD4D3002DF794 /* OAuth-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66D142711D9AD4D4002DF794 /* Build configuration list for PBXNativeTarget "OAuth-macOS" */;
+			buildPhases = (
+				66D1425A1D9AD4D3002DF794 /* Sources */,
+				66D1425B1D9AD4D3002DF794 /* Frameworks */,
+				66D1425C1D9AD4D3002DF794 /* Headers */,
+				66D1425D1D9AD4D3002DF794 /* Resources */,
+				669AA3B71DA3DAB5002404BF /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "OAuth-macOS";
 			productName = OAuth;
 			productReference = 66D1425F1D9AD4D4002DF794 /* OAuth.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		66D142671D9AD4D4002DF794 /* OAuthTests */ = {
+		66D142671D9AD4D4002DF794 /* Tests-macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 66D142741D9AD4D4002DF794 /* Build configuration list for PBXNativeTarget "OAuthTests" */;
+			buildConfigurationList = 66D142741D9AD4D4002DF794 /* Build configuration list for PBXNativeTarget "Tests-macOS" */;
 			buildPhases = (
 				66D142641D9AD4D4002DF794 /* Sources */,
 				66D142651D9AD4D4002DF794 /* Frameworks */,
@@ -156,9 +390,9 @@
 			dependencies = (
 				66D1426B1D9AD4D4002DF794 /* PBXTargetDependency */,
 			);
-			name = OAuthTests;
+			name = "Tests-macOS";
 			productName = OAuthTests;
-			productReference = 66D142681D9AD4D4002DF794 /* OAuthTests.xctest */;
+			productReference = 66D142681D9AD4D4002DF794 /* Tests-macOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -170,6 +404,18 @@
 				LastSwiftUpdateCheck = 0800;
 				LastUpgradeCheck = 0800;
 				TargetAttributes = {
+					66B9DBE21DA3CA18001F6E86 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					66B9DBF11DA3CFC6001F6E86 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					66B9DBFE1DA3D031001F6E86 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
 					66D1425E1D9AD4D3002DF794 = {
 						CreatedOnToolsVersion = 8.0;
 						LastSwiftMigration = 0800;
@@ -182,7 +428,7 @@
 				};
 			};
 			buildConfigurationList = 66D142571D9AD400002DF794 /* Build configuration list for PBXProject "OAuth" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -193,13 +439,61 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				66D1425E1D9AD4D3002DF794 /* OAuth */,
-				66D142671D9AD4D4002DF794 /* OAuthTests */,
+				66B9DBE21DA3CA18001F6E86 /* OAuth-iOS */,
+				66D1425E1D9AD4D3002DF794 /* OAuth-macOS */,
+				66B9DBFE1DA3D031001F6E86 /* OAuth-tvOS */,
+				66B9DBF11DA3CFC6001F6E86 /* OAuth-watchOS */,
+				669AA3921DA3D652002404BF /* Tests-iOS */,
+				66D142671D9AD4D4002DF794 /* Tests-macOS */,
+				669AA39E1DA3D6C4002404BF /* Tests-tvOS */,
+				669AA3AA1DA3D6C8002404BF /* Tests-watchOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		669AA3991DA3D652002404BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		669AA3A51DA3D6C4002404BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		669AA3B11DA3D6C8002404BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66B9DBE11DA3CA18001F6E86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66B9DBF01DA3CFC6001F6E86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66B9DBFD1DA3D031001F6E86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		66D1425D1D9AD4D3002DF794 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -217,7 +511,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6697E0201DA27EF000FB14AD /* ShellScript */ = {
+		669AA3B61DA3DA46002404BF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/CommonCrypto.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		669AA3B71DA3DAB5002404BF /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -231,9 +539,82 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
+		669AA3B81DA3DAC4002404BF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/tvOS/CommonCrypto.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		669AA3B91DA3DACC002404BF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/watchOS/CommonCrypto.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		669AA3951DA3D652002404BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				669AA3961DA3D652002404BF /* Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		669AA3A11DA3D6C4002404BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				669AA3A21DA3D6C4002404BF /* Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		669AA3AD1DA3D6C8002404BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				669AA3AE1DA3D6C8002404BF /* Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66B9DBDE1DA3CA18001F6E86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66B9DBED1DA3CFC6001F6E86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66B9DBFA1DA3D031001F6E86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		66D1425A1D9AD4D3002DF794 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -249,25 +630,738 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66D1426E1D9AD4D4002DF794 /* OAuthTests.swift in Sources */,
+				66D1426E1D9AD4D4002DF794 /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		669AA3931DA3D652002404BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66D1425E1D9AD4D3002DF794 /* OAuth-macOS */;
+			targetProxy = 669AA3941DA3D652002404BF /* PBXContainerItemProxy */;
+		};
+		669AA39F1DA3D6C4002404BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66D1425E1D9AD4D3002DF794 /* OAuth-macOS */;
+			targetProxy = 669AA3A01DA3D6C4002404BF /* PBXContainerItemProxy */;
+		};
+		669AA3AB1DA3D6C8002404BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66D1425E1D9AD4D3002DF794 /* OAuth-macOS */;
+			targetProxy = 669AA3AC1DA3D6C8002404BF /* PBXContainerItemProxy */;
+		};
 		66D1426B1D9AD4D4002DF794 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 66D1425E1D9AD4D3002DF794 /* OAuth */;
+			target = 66D1425E1D9AD4D3002DF794 /* OAuth-macOS */;
 			targetProxy = 66D1426A1D9AD4D4002DF794 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		669AA39B1DA3D652002404BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = mayu.laierlence.macos.OAuthTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		669AA39C1DA3D652002404BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = mayu.laierlence.macos.OAuthTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		669AA3A71DA3D6C4002404BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = mayu.laierlence.macos.OAuthTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		669AA3A81DA3D6C4002404BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = mayu.laierlence.macos.OAuthTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		669AA3B31DA3D6C8002404BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = mayu.laierlence.macos.OAuthTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		669AA3B41DA3D6C8002404BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = mayu.laierlence.macos.OAuthTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		66B9DBE91DA3CA18001F6E86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = OAuth/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = moe.minacle.oauth;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		66B9DBEA1DA3CA18001F6E86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = OAuth/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = moe.minacle.oauth;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		66B9DBF81DA3CFC7001F6E86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = OAuth/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = moe.minacle.oauth;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Debug;
+		};
+		66B9DBF91DA3CFC7001F6E86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = OAuth/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = moe.minacle.oauth;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Release;
+		};
+		66B9DC051DA3D032001F6E86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = OAuth/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = moe.minacle.oauth;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		66B9DC061DA3D032001F6E86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = OAuth/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = moe.minacle.oauth;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		66D142581D9AD400002DF794 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				PRODUCT_NAME = OAuth;
 			};
 			name = Debug;
 		};
@@ -275,6 +1369,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				PRODUCT_NAME = OAuth;
 			};
 			name = Release;
 		};
@@ -339,8 +1434,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = mayu.laierlence.macos.framework.oauth;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = moe.minacle.oauth;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -405,8 +1499,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = mayu.laierlence.macos.framework.oauth;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = moe.minacle.oauth;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -458,7 +1551,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = OAuthTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -508,7 +1601,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = OAuthTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -523,6 +1616,60 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		669AA39A1DA3D652002404BF /* Build configuration list for PBXNativeTarget "Tests-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				669AA39B1DA3D652002404BF /* Debug */,
+				669AA39C1DA3D652002404BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		669AA3A61DA3D6C4002404BF /* Build configuration list for PBXNativeTarget "Tests-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				669AA3A71DA3D6C4002404BF /* Debug */,
+				669AA3A81DA3D6C4002404BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		669AA3B21DA3D6C8002404BF /* Build configuration list for PBXNativeTarget "Tests-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				669AA3B31DA3D6C8002404BF /* Debug */,
+				669AA3B41DA3D6C8002404BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66B9DBE81DA3CA18001F6E86 /* Build configuration list for PBXNativeTarget "OAuth-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66B9DBE91DA3CA18001F6E86 /* Debug */,
+				66B9DBEA1DA3CA18001F6E86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66B9DBF71DA3CFC7001F6E86 /* Build configuration list for PBXNativeTarget "OAuth-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66B9DBF81DA3CFC7001F6E86 /* Debug */,
+				66B9DBF91DA3CFC7001F6E86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66B9DC041DA3D032001F6E86 /* Build configuration list for PBXNativeTarget "OAuth-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66B9DC051DA3D032001F6E86 /* Debug */,
+				66B9DC061DA3D032001F6E86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		66D142571D9AD400002DF794 /* Build configuration list for PBXProject "OAuth" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -532,7 +1679,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		66D142711D9AD4D4002DF794 /* Build configuration list for PBXNativeTarget "OAuth" */ = {
+		66D142711D9AD4D4002DF794 /* Build configuration list for PBXNativeTarget "OAuth-macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				66D142721D9AD4D4002DF794 /* Debug */,
@@ -541,7 +1688,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		66D142741D9AD4D4002DF794 /* Build configuration list for PBXNativeTarget "OAuthTests" */ = {
+		66D142741D9AD4D4002DF794 /* Build configuration list for PBXNativeTarget "Tests-macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				66D142751D9AD4D4002DF794 /* Debug */,
