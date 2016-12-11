@@ -1,6 +1,7 @@
 import XCTest
 @testable import OAuth
 
+@available(macOS 10.11, iOS 9.0, tvOS 10.0, watchOS 3.0, *)
 class OAuthTests: XCTestCase {
 
     func testRequestToken() {
