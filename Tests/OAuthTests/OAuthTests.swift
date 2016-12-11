@@ -5,6 +5,8 @@ import Dispatch
 
 @available(macOS 10.11, iOS 9.0, tvOS 10.0, watchOS 3.0, *)
 class OAuthTests: XCTestCase {
+    
+    let urlSession = URLSession(configuration: URLSessionConfiguration.default)
 
     func testRequestToken() {
         let dispatchSemaphore = DispatchSemaphore(value: 0)
@@ -13,8 +15,7 @@ class OAuthTests: XCTestCase {
         let consumerCredential = OAuthCredential(key: "key", secret: "secret")
         let oauth = OAuth10(urlRequest: urlRequest, consumerCredential: consumerCredential)
         urlRequest.setValue(oauth.description, forHTTPHeaderField: "Authorization")
-        let urlSession = URLSession.shared
-        let task = urlSession.dataTask(with: urlRequest) {
+        let task = self.urlSession.dataTask(with: urlRequest) {
             (data: Data?, urlResponse: URLResponse?, error: Error?) in
             if let data = data {
                 let string = String(data: data, encoding: String.Encoding.utf8)!
@@ -39,8 +40,7 @@ class OAuthTests: XCTestCase {
         let requestCredential = OAuthCredential(key: "requestkey", secret: "requestsecret")
         let oauth = OAuth10(urlRequest: urlRequest, consumerCredential: consumerCredential, requestCredential: requestCredential)
         urlRequest.setValue(oauth.description, forHTTPHeaderField: "Authorization")
-        let urlSession = URLSession.shared
-        let task = urlSession.dataTask(with: urlRequest) {
+        let task = self.urlSession.dataTask(with: urlRequest) {
             (data: Data?, urlResponse: URLResponse?, error: Error?) in
             if let data = data {
                 let string = String(data: data, encoding: String.Encoding.utf8)!
@@ -67,8 +67,7 @@ class OAuthTests: XCTestCase {
         let accessCredential = OAuthCredential(key: "accesskey", secret: "accesssecret")
         let oauth = OAuth10(urlRequest: urlRequest, consumerCredential: consumerCredential, accessCredential: accessCredential)
         urlRequest.setValue(oauth.description, forHTTPHeaderField: "Authorization")
-        let urlSession = URLSession.shared
-        let task = urlSession.dataTask(with: urlRequest) {
+        let task = self.urlSession.dataTask(with: urlRequest) {
             (data: Data?, urlResponse: URLResponse?, error: Error?) in
             if let data = data {
                 let string = String(data: data, encoding: String.Encoding.utf8)!
