@@ -2,7 +2,7 @@ import Foundation
 
 @available(macOS 10.11, iOS 9.0, tvOS 10.0, watchOS 3.0, *)
 public struct OAuth10: CustomStringConvertible {
-    public static let unreservedCharacterSet = CharacterSet.urlUnreservedCharacters()
+    public static let unreservedCharacterSet = CharacterSet.urlUnreservedCharacters
 
     private let urlRequest: URLRequest
 
