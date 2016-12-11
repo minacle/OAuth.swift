@@ -81,4 +81,12 @@ class OAuthTests: XCTestCase {
         task.resume()
         dispatchSemaphore.wait()
     }
+
+    static var allTests: [(String, (OAuthTests) -> () throws -> Void)] {
+        return [
+            ("testRequestToken", testRequestToken),
+            ("testAccessToken", testAccessToken),
+            ("testAPI", testAPI)
+        ]
+    }
 }
