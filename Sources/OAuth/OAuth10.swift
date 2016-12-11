@@ -69,10 +69,7 @@ public struct OAuth10: CustomStringConvertible {
             if let nonce = self["nonce"] {
                 return Data(base64Encoded: nonce) ?? nonce.data(using: String.Encoding.utf8, allowLossyConversion: true)!
             }
-            let buffer = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: 12)
-            arc4random_buf(buffer, 12)
-            let nonce = Data(bytes: buffer, count: 12)
-            buffer.deallocate(capacity: 12)
+            let nonce = UUID().uuidString.data(using: .utf8)!
             return nonce
         }
         set {
