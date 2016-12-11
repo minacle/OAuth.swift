@@ -7,7 +7,7 @@ public enum OAuthSignatureMethod: String {
     internal func signature(baseString: String, keyString: String) -> String {
         switch self {
         case .hmacSha1:
-            return baseString.hmac(algorithm: CryptoAlgorithm.sha1, key: keyString).base64EncodedString()
+            return baseString.hmac(algorithm: .sha1, key: keyString).base64EncodedString()
         case .plaintext:
             return keyString
         }
