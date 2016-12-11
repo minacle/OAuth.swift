@@ -6,7 +6,7 @@
 //  Copyright © 2016 Sinoru. All rights reserved.
 
 import XCTest
-@testable import OAuth
+@testable import OAuthTests
 
 XCTMain([
      testCase(OAuthTests.allTests)
