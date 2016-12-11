@@ -20,8 +20,7 @@ public struct OAuth10: CustomStringConvertible {
         set {
             if newValue != "" {
                 self["consumer_key"] = newValue
-            }
-            else {
+            } else {
                 self["consumer_key"] = nil
             }
         }
@@ -78,8 +77,7 @@ public struct OAuth10: CustomStringConvertible {
         set {
             if newValue.count != 0 {
                 self["nonce"] = newValue.base64EncodedString()
-            }
-            else {
+            } else {
                 self["nonce"] = nil
             }
         }
@@ -141,8 +139,7 @@ public struct OAuth10: CustomStringConvertible {
             }
             if let newValue = newValue {
                 oauthParameters[key] = newValue
-            }
-            else {
+            } else {
                 oauthParameters.removeValue(forKey: key)
             }
         }
@@ -189,13 +186,11 @@ public struct OAuth10: CustomStringConvertible {
                 let kv = kv.components(separatedBy: "=")
                 if parameters[kv[0]] != nil {
                     parameters[kv[0]]!.append(kv[1])
-                }
-                else {
+                } else {
                     parameters[kv[0]] = [kv[1]]
                 }
             }
-        }
-        else {
+        } else {
             string.append("\(urlString.addingPercentEncoding(withAllowedCharacters: OAuth10.unreservedCharacterSet)!)&")
         }
         if urlRequest.httpMethod == "POST" && urlRequest.allHTTPHeaderFields?["Content-Type"] == "application/x-www-form-urlencoded" {
@@ -204,8 +199,7 @@ public struct OAuth10: CustomStringConvertible {
                     let kv = kv.components(separatedBy: "=")
                     if parameters[kv[0]] != nil {
                         parameters[kv[0]]!.append(kv[1])
-                    }
-                    else {
+                    } else {
                         parameters[kv[0]] = [kv[1]]
                     }
                 }
