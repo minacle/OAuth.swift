@@ -1,14 +1,7 @@
-#
-#  .swiftlint.yml
-#  STwitter
-#  
-#  Created by Sinoru on 2016. 12. 2..
-#  Copyright © 2016 Sinoru. All rights reserved.
-
 disabled_rules:
   - line_length
-included: # paths to include during linting. `--path` is ignored if present.
+included:
   - Sources
   - Tests
-excluded: # paths to ignore during linting. Takes precedence over `included`.
+excluded:
   - Packages

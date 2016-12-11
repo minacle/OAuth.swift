@@ -2,8 +2,6 @@ import Foundation
 
 @available(macOS 10.11, iOS 9.0, tvOS 10.0, watchOS 3.0, *)
 public struct OAuth10: CustomStringConvertible {
-    public static let unreservedCharacterSet = CharacterSet.urlUnreservedCharacters
-
     private let urlRequest: URLRequest
 
     public var consumerCredential: OAuthCredential
@@ -117,10 +115,10 @@ public struct OAuth10: CustomStringConvertible {
         }
         let oauthParameters = computedOAuthParameters
         for (k, v) in oauthParameters {
-            string.append("\(comma) oauth_\(k.addingPercentEncoding(withAllowedCharacters: OAuth10.unreservedCharacterSet)!)=\"\(v.addingPercentEncoding(withAllowedCharacters: OAuth10.unreservedCharacterSet)!)\"")
+            string.append("\(comma) oauth_\(k.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlUnreservedCharacters)!)=\"\(v.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlUnreservedCharacters)!)\"")
             comma = ","
         }
-        string.append(", oauth_signature=\"\(signatureMethod.signature(baseString: signatureBaseString(oauthParameters)!, keyString: signatureKeyString()).addingPercentEncoding(withAllowedCharacters: OAuth10.unreservedCharacterSet)!)\"")
+        string.append(", oauth_signature=\"\(signatureMethod.signature(baseString: signatureBaseString(oauthParameters)!, keyString: signatureKeyString()).addingPercentEncoding(withAllowedCharacters: CharacterSet.urlUnreservedCharacters)!)\"")
         return string
     }
 
@@ -179,7 +177,7 @@ public struct OAuth10: CustomStringConvertible {
             parameters["oauth_\(k)"] = [v]
         }
         if let rangeOfQuery = URLComponents(url: url, resolvingAgainstBaseURL: true)!.rangeOfQuery {
-            string.append("\(urlString.replacingCharacters(in: Range(uncheckedBounds: (lower: urlString.index(before: rangeOfQuery.lowerBound), upper: rangeOfQuery.upperBound)), with: "").addingPercentEncoding(withAllowedCharacters: OAuth10.unreservedCharacterSet)!)&")
+            string.append("\(urlString.replacingCharacters(in: Range(uncheckedBounds: (lower: urlString.index(before: rangeOfQuery.lowerBound), upper: rangeOfQuery.upperBound)), with: "").addingPercentEncoding(withAllowedCharacters: CharacterSet.urlUnreservedCharacters)!)&")
             for kv in url.query!.components(separatedBy: "&") {
                 let kv = kv.components(separatedBy: "=")
                 if parameters[kv[0]] != nil {
@@ -189,7 +187,7 @@ public struct OAuth10: CustomStringConvertible {
                 }
             }
         } else {
-            string.append("\(urlString.addingPercentEncoding(withAllowedCharacters: OAuth10.unreservedCharacterSet)!)&")
+            string.append("\(urlString.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlUnreservedCharacters)!)&")
         }
         if urlRequest.httpMethod == "POST" && urlRequest.allHTTPHeaderFields?["Content-Type"] == "application/x-www-form-urlencoded" {
             if let data = urlRequest.httpBody {
@@ -209,7 +207,7 @@ public struct OAuth10: CustomStringConvertible {
             sortedParameters[index].value = sortedParameters[index].value.sorted(by: <)
             let item = sortedParameters[index]
             for v in item.value {
-                string.append("\(ampersand)\(item.key.addingPercentEncoding(withAllowedCharacters: OAuth10.unreservedCharacterSet)!)=\(v.addingPercentEncoding(withAllowedCharacters: OAuth10.unreservedCharacterSet)!)".addingPercentEncoding(withAllowedCharacters: OAuth10.unreservedCharacterSet)!)
+                string.append("\(ampersand)\(item.key.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlUnreservedCharacters)!)=\(v.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlUnreservedCharacters)!)".addingPercentEncoding(withAllowedCharacters: CharacterSet.urlUnreservedCharacters)!)
                 ampersand = "&"
             }
         }
@@ -217,9 +215,9 @@ public struct OAuth10: CustomStringConvertible {
     }
 
     private func signatureKeyString() -> String {
-        var keyString = "\(consumerCredential.secret.addingPercentEncoding(withAllowedCharacters: OAuth10.unreservedCharacterSet)!)&"
+        var keyString = "\(consumerCredential.secret.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlUnreservedCharacters)!)&"
         if let tokenSecret = accessCredential?.secret ?? requestCredential?.secret {
-            keyString.append(tokenSecret.addingPercentEncoding(withAllowedCharacters: OAuth10.unreservedCharacterSet)!)
+            keyString.append(tokenSecret.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlUnreservedCharacters)!)
         }
         return keyString
     }
