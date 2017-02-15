@@ -1,6 +1,5 @@
 import Foundation
 
-@available(macOS 10.11, iOS 9.0, tvOS 10.0, watchOS 3.0, *)
 public struct OAuth10: CustomStringConvertible {
     private let urlRequest: URLRequest
 
@@ -176,7 +175,7 @@ public struct OAuth10: CustomStringConvertible {
         for (k, v) in oauthParameters {
             parameters["oauth_\(k)"] = [v]
         }
-        if let rangeOfQuery = URLComponents(url: url, resolvingAgainstBaseURL: true)!.rangeOfQuery {
+        if let rangeOfQuery = URLComponents(url: url, resolvingAgainstBaseURL: true)!._rangeOfQuery {
             string.append("\(urlString.replacingCharacters(in: Range(uncheckedBounds: (lower: urlString.index(before: rangeOfQuery.lowerBound), upper: rangeOfQuery.upperBound)), with: "").addingPercentEncoding(withAllowedCharacters: CharacterSet.urlUnreservedCharacters)!)&")
             for kv in url.query!.components(separatedBy: "&") {
                 let kv = kv.components(separatedBy: "=")
