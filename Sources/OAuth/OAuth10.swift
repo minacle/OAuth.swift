@@ -1,7 +1,8 @@
 import Foundation
 
 public struct OAuth10: CustomStringConvertible {
-    private let urlRequest: URLRequest
+
+    public var urlRequestPointer: UnsafePointer<URLRequest>?
 
     public var consumerCredential: OAuthCredential
     public var requestCredential: OAuthCredential?
@@ -117,7 +118,9 @@ public struct OAuth10: CustomStringConvertible {
             string.append("\(comma) oauth_\(k.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlUnreservedCharacters)!)=\"\(v.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlUnreservedCharacters)!)\"")
             comma = ","
         }
-        string.append(", oauth_signature=\"\(signatureMethod.signature(baseString: signatureBaseString(oauthParameters)!, keyString: signatureKeyString()).addingPercentEncoding(withAllowedCharacters: CharacterSet.urlUnreservedCharacters)!)\"")
+        if urlRequestPointer != nil {
+            string.append(", oauth_signature=\"\(signatureMethod.signature(baseString: signatureBaseString(oauthParameters)!, keyString: signatureKeyString()).addingPercentEncoding(withAllowedCharacters: CharacterSet.urlUnreservedCharacters)!)\"")
+        }
         return string
     }
 
@@ -144,21 +147,50 @@ public struct OAuth10: CustomStringConvertible {
         return nil
     }
 
-    public init(urlRequest: URLRequest, consumerCredential: OAuthCredential) {
-        self.urlRequest = urlRequest
+    public init(to urlRequestPointer: UnsafePointer<URLRequest>? = nil, consumerCredential: OAuthCredential) {
+        self.urlRequestPointer = urlRequestPointer
         self.consumerCredential = consumerCredential
     }
 
-    public init(urlRequest: URLRequest, consumerCredential: OAuthCredential, requestCredential: OAuthCredential) {
-        self.urlRequest = urlRequest
+    public init(to urlRequestPointer: UnsafePointer<URLRequest>? = nil, consumerCredential: OAuthCredential, requestCredential: OAuthCredential) {
+        self.urlRequestPointer = urlRequestPointer
         self.consumerCredential = consumerCredential
         self.requestCredential = requestCredential
     }
 
-    public init(urlRequest: URLRequest, consumerCredential: OAuthCredential, accessCredential: OAuthCredential) {
-        self.urlRequest = urlRequest
+    public init(to urlRequestPointer: UnsafePointer<URLRequest>? = nil, consumerCredential: OAuthCredential, accessCredential: OAuthCredential) {
+        self.urlRequestPointer = urlRequestPointer
         self.consumerCredential = consumerCredential
         self.accessCredential = accessCredential
+    }
+
+    @available(*, deprecated)
+    public init(urlRequest: URLRequest, consumerCredential: OAuthCredential) {
+        self.consumerCredential = consumerCredential
+        var urlRequest = urlRequest
+        withUnsafePointer(to: &urlRequest) {
+            urlRequestPointer = $0
+        }
+    }
+
+    @available(*, deprecated)
+    public init(urlRequest: URLRequest, consumerCredential: OAuthCredential, requestCredential: OAuthCredential) {
+        self.consumerCredential = consumerCredential
+        self.requestCredential = requestCredential
+        var urlRequest = urlRequest
+        withUnsafePointer(to: &urlRequest) {
+            urlRequestPointer = $0
+        }
+    }
+
+    @available(*, deprecated)
+    public init(urlRequest: URLRequest, consumerCredential: OAuthCredential, accessCredential: OAuthCredential) {
+        self.consumerCredential = consumerCredential
+        self.accessCredential = accessCredential
+        var urlRequest = urlRequest
+        withUnsafePointer(to: &urlRequest) {
+            urlRequestPointer = $0
+        }
     }
 
     private func signatureBaseString() -> String? {
@@ -166,6 +198,9 @@ public struct OAuth10: CustomStringConvertible {
     }
 
     private func signatureBaseString(_ oauthParameters: [String: String]) -> String? {
+        guard let urlRequest = urlRequestPointer?.pointee else {
+            return nil
+        }
         guard let url = urlRequest.url else {
             return nil
         }

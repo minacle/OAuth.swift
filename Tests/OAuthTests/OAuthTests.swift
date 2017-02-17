@@ -3,7 +3,6 @@ import Foundation
 import Dispatch
 @testable import OAuth
 
-@available(macOS 10.11, iOS 9.0, tvOS 10.0, watchOS 3.0, *)
 class OAuthTests: XCTestCase {
     
     let urlSession = URLSession(configuration: URLSessionConfiguration.default)
@@ -13,7 +12,7 @@ class OAuthTests: XCTestCase {
         var urlRequest = URLRequest(url: URL(string: "http://term.ie/oauth/example/request_token.php")!)
         urlRequest.httpMethod = "POST"
         let consumerCredential = OAuthCredential(key: "key", secret: "secret")
-        let oauth = OAuth10(urlRequest: urlRequest, consumerCredential: consumerCredential)
+        let oauth = OAuth10(to: &urlRequest, consumerCredential: consumerCredential)
         urlRequest.setValue(oauth.description, forHTTPHeaderField: "Authorization")
         let task = self.urlSession.dataTask(with: urlRequest) {
             (data: Data?, urlResponse: URLResponse?, error: Error?) in
@@ -38,7 +37,7 @@ class OAuthTests: XCTestCase {
         urlRequest.httpMethod = "POST"
         let consumerCredential = OAuthCredential(key: "key", secret: "secret")
         let requestCredential = OAuthCredential(key: "requestkey", secret: "requestsecret")
-        let oauth = OAuth10(urlRequest: urlRequest, consumerCredential: consumerCredential, requestCredential: requestCredential)
+        let oauth = OAuth10(to: &urlRequest, consumerCredential: consumerCredential, requestCredential: requestCredential)
         urlRequest.setValue(oauth.description, forHTTPHeaderField: "Authorization")
         let task = self.urlSession.dataTask(with: urlRequest) {
             (data: Data?, urlResponse: URLResponse?, error: Error?) in
@@ -65,7 +64,7 @@ class OAuthTests: XCTestCase {
         urlRequest.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         let consumerCredential = OAuthCredential(key: "key", secret: "secret")
         let accessCredential = OAuthCredential(key: "accesskey", secret: "accesssecret")
-        let oauth = OAuth10(urlRequest: urlRequest, consumerCredential: consumerCredential, accessCredential: accessCredential)
+        let oauth = OAuth10(to: &urlRequest, consumerCredential: consumerCredential, accessCredential: accessCredential)
         urlRequest.setValue(oauth.description, forHTTPHeaderField: "Authorization")
         let task = self.urlSession.dataTask(with: urlRequest) {
             (data: Data?, urlResponse: URLResponse?, error: Error?) in
@@ -83,6 +82,9 @@ class OAuthTests: XCTestCase {
         task.resume()
         dispatchSemaphore.wait()
     }
+}
+
+extension OAuthTests {
 
     static var allTests: [(String, (OAuthTests) -> () throws -> Void)] {
         return [
